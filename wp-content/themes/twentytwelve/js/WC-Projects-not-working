@@ -1,0 +1,114 @@
+{embed="/world_changers_embeds/.head" page_title="World Changers"}
+	
+{embed="/world_changers_embeds/.header"}
+
+	<div id="bd">
+    	<div class="wrap page-2 clearfix">
+        	{embed="/world_changers_embeds/.sub_nav"}
+            <div class="col-c content">
+            	<h1>2013 Projects</h1>
+<p>World Changers is excited to be working for multiple weeks in many cities for 2013. Projects continue to be a week of construction and/or community service allowing participants to meet physical needs as a means of meeting spiritual needs. For registration assistance or to register over the phone please call 800-254-2022. <br>
+            	<!--<a href="{path='/projects/free-spot'}" style="font-weight:bold;">Get your group a FREE SPOT!</a>-->
+</p>
+
+				<div class="ptable">
+				    <table cellspacing="0" class="display">
+				        <thead>
+				            <tr>
+				                <th>City</th>
+				                <th>State</th>
+				                <th>Type</th>
+				                <th>Start</th>
+				                <th>End</th>
+				                <th>Fee</th>
+				                <th></th>
+				            </tr>
+				        </thead>
+				        <tfoot>
+				            <tr>
+				                <th>City</th>
+				                <th>State</th>
+				                <th>Type</th>
+				                <th>Start</th>
+				                <th>End</th>
+				                <th>Fee</th>
+				                <th></th>
+				            </tr>
+				        </tfoot>
+				        <tbody>				 
+				        	{exp:weblog:entries weblog="projects" orderby="start_date" disable="trackbacks|member_data|pagination|categories" limit="149" } {!-- MAY NEED TO USE offset=" ##" for the summer months --} 
+
+{if {start_date format="%Y"} == {current_time format="%Y"} }
+
+<!-- UNCOMMENT (" {!-- xxxxx --} ") when then conditions are needed during the summer to show both years of projects   -->
+
+
+				        	<tr>
+				        		<td>{city}</td><td>{state}</td><td>{type}</td><td>{start_date format="%n/%j/%y"}</td><td>{end_date format="%n/%j/%y"}</td><td>{fee}</td><td><a href="https://registration.lifeway.com/ebusiness/meetings/lwregister.aspx?E_CODE={link}">Register</a></td>
+				        	</tr>
+
+ {/if}  <!-- UNCOMMENT -->
+
+
+				        	{/exp:weblog:entries}
+				        </tbody>
+				    </table>
+				</div>
+<!--
+            	<h1 id="new_projects">2014 Projects</h1>
+				<div class="ptable">
+				    <table cellspacing="0" class="display">
+				        <thead>
+				            <tr>
+				                <th>City</th>
+				                <th>State</th>
+				                <th>Type</th>
+				                <th>Start</th>
+				                <th>End</th>
+				                <th>Fee</th>
+				                <th></th>
+				            </tr>
+				        </thead>
+				        <tfoot>
+				            <tr>
+				                <th>City</th>
+				                <th>State</th>
+				                <th>Type</th>
+				                <th>Start</th>
+				                <th>End</th>
+				                <th>Fee</th>
+				                <th></th>
+				            </tr>
+				        </tfoot>
+				        <tbody>		
+
+		 
+				        	{exp:weblog:entries weblog="projects" orderby="start_date asc" disable="trackbacks|member_data|pagination|categories"}
+
+
+{if {start_date format="%Y"} > {current_time format="%Y"} }
+				        	<tr>
+				        		<td>{city}</td><td>{state}</td><td>{type}</td><td>{start_date format="%n/%j/%y"}</td><td>{end_date format="%n/%j/%y"}</td><td>{fee}</td><td><a href="https://registration.lifeway.com/ebusiness/meetings/lwregister.aspx?E_CODE={link}">Register</a></td>
+				        	</tr>
+{/if}
+				        	{/exp:weblog:entries}
+				        </tbody>
+				    </table>
+				</div>
+-->
+
+
+<p><strong>Event Type Key:</strong><br>
+SH : Senior High (Students must have completed 9th grade and up)<br>
+AY : All Youth (Students must have completed 6th grade and up)<br>
+COM : Community Projects (offers non construction ministry options)<br>
+Spring Break : Launch 3 day schedule for All Youth<br>
+DR : Disaster Response to Hurricane Sandy</p>
+
+
+            </div>  		
+        </div>
+    </div>
+
+{embed="/world_changers_embeds/.footer"}
+{embed="/world_changers_embeds/.script"}
