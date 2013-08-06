@@ -1,11 +1,12 @@
-window.onload=function(){
-	$('.success').addClass('down');
-	setInterval( function() {
-			$('.success').removeClass('down');
-	}, 7000);
-};
+// window.onload=function(){
+// 	$('.success').addClass('down');
+// 	setInterval( function() {
+// 			$('.success').removeClass('down');
+// 	}, 7000);
+// };
 
 $(document).ready(function(){
+
 	
 	var windowSize = $(window).width();
 	var itsMobile;
@@ -18,6 +19,7 @@ $(document).ready(function(){
 	// 	e.preventDefault();
 	// 	$(this).closest('li').toggleClass('expanded');
 	// });
+
 	$('.nav .no-link a').on('click', function(e){
 		if($(this).parent().hasClass('no-link')){e.preventDefault();}
 		if(windowSize<550){
@@ -27,18 +29,18 @@ $(document).ready(function(){
 	});
 
 	// create mobile nav
-	var galleries = $('.touch .nav .no-link');
-	if(galleries.length && itsMobile===true){
-		var nav_copy = '<div class="galleries-mobile-nav">'+galleries.html()+'</div>';
-		$('body').prepend(nav_copy);
-		galleries.find('a').on('click', function(){
-			mobile_nav = $('.galleries-mobile-nav');
-			if(mobile_nav.hasClass('show'))
-				{ mobile_nav.removeClass('show'); }
-			else
-				{ mobile_nav.addClass('show'); }
-		});
-	}
+	// var galleries = $('.touch .nav .no-link');
+	// if(galleries.length && itsMobile===true){
+	// 	var nav_copy = '<div class="galleries-mobile-nav">'+galleries.html()+'</div>';
+	// 	$('body').prepend(nav_copy);
+	// 	galleries.find('a').on('click', function(){
+	// 		mobile_nav = $('.galleries-mobile-nav');
+	// 		if(mobile_nav.hasClass('show'))
+	// 			{ mobile_nav.removeClass('show'); }
+	// 		else
+	// 			{ mobile_nav.addClass('show'); }
+	// 	});
+	// }
 
 	// test to see if google font loads
 	WebFontConfig = { google: { families: [ 'Tangerine' ] } };
@@ -54,7 +56,24 @@ $(document).ready(function(){
 
 	// form submitted message
 	if(window.location.hash=='#success') {
-		$('.header-outer').append('<p class="success">Your form was submitted successfully.<p>');
+		$('.header-outer').append('<p class="success">Your form was submitted successfully.</p>');
+
+		setTimeout(function(){
+			$('.success').addClass('down');
+			setTimeout(function(){
+				$('.success').removeClass('down');
+			},5000);
+		},1000);
+		// $('.success').addClass('');
+		// setInterval( function() {
+		// 	$('.success').addClass('down');
+		// }, 1000);
+
+		// setInterval( function() {
+		// 	clearInterval();
+		// 	$('.success').removeClass('down');
+		// }, 4000);
+		
 	}
 
 	// Cat Title and Text block
@@ -102,7 +121,6 @@ $(document).ready(function(){
 	var last_img = ss.find('.img-block').last();
 	var fade_time = 1500;
 	var fade_in_time = 1500;
-
 
 	function cycle() {
 		var next_img = ss.find('.on').removeClass('on').next();
@@ -158,13 +176,13 @@ $(document).ready(function(){
 				}); 
 			}
 
-						// var scrollTopVar = $this.parent().offset().top-10;
-						// console.log(scrollTopVar);
-						// console.log($(window).scrollTop());
-						// $(window).scrollTop(scrollTopVar);
-						
-						// console.log(scrollTopVar);
-						// console.log($(window).scrollTop());
+			// var scrollTopVar = $this.parent().offset().top-10;
+			// console.log(scrollTopVar);
+			// console.log($(window).scrollTop());
+			// $(window).scrollTop(scrollTopVar);
+
+			// console.log(scrollTopVar);
+			// console.log($(window).scrollTop());
 		}
 	});
 
