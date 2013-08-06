@@ -15,9 +15,6 @@
 
 
  include 'header.php';
-	// get_header(); 
-	
-	$global_img_ratio = 2/3;
 
 	$cat_args = array(
 		'type'                     => 'post',
@@ -57,28 +54,29 @@
 				<div class="cat-title clearfix">
 					<h2><?php the_title(); ?></h2>
 				</div>
-					<div class="slideshow max-width" data-ratio="<?php echo $global_img_ratio;?>">
-			<?php 
-				$count = 1;
-				foreach( $posts_array as $post ) :	setup_postdata($posted); if ( has_post_thumbnail() ) { 
-					$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
-					if($thumb['2']/$thumb['1']>=$global_img_ratio) {$img_class=' height';} else {$img_class=' width';}
-			?>
-					<div class="img-block<?php if($count==1){?> on<?php $count++; } echo $img_class; ?>">
-						<div>
-							<?php echo '<img src="'.$thumb['0'].'" width="'.$thumb['1'].'" height="'.$thumb['2'].'">'; ?>
+					<div class="slideshow">
+						<div class="slideshow-inner">
+						<?php 
+							$count = false;
+							foreach( $posts_array as $post ) :	setup_postdata($posted); if ( has_post_thumbnail() ) { 
+								$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+						?>
+								<div class="img-block<?php if($count==false){?> on<?php $count=ture; } ?>">
+									<div class="img-wrap">
+										<div>
+											<?php echo '<img src="'.$thumb['0'].'">'; ?>
+										</div>
+									</div>
+								</div>
+								
+						<?php } endforeach; ?>
 						</div>
 					</div>
-					
-			<?php } endforeach; ?>
-
-					</div>
 				<div class="cat-info">
-					<div class="text-block">
-						<?php 	while ( have_posts() ) : the_post(); ?>
-							<?php the_content(); ?>
-						<?php endwhile; ?>
-					</div>
+						<?php 	while ( have_posts() ) : the_post(); 
+						if(trim($content)==true){echo '<div class="text-block">'; the_content(); echo '</div>';}
+						 endwhile; ?>
+					
 				</div>
 			</div>		
 		</div>

@@ -36,7 +36,7 @@
  	$args = array(
 	'posts_per_page'  => '',
 	'numberposts'     => '',
-	'category'        => 13, // 23 is local & 13 is live
+	'category'        => 23, // 23 is local & 13 is live
 	'orderby'         => 'name',
 	'order'           => 'DESC',
 	'post_type'       => 'post',

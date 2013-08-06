@@ -4,7 +4,7 @@ Author URI: http://www.642weather.com/weather/scripts.php
 Donate link: http://www.FastSecureContactForm.com/donate
 Tags: Akismet, captcha, contact, contact form, form, mail, email, spam, multilingual, wpmu
 Requires at least: 3.4.2
-Tested up to: 3.5.1
+Tested up to: 3.5.2
 Stable tag: trunk
 
 A super customizable contact form that lets your visitors send you email. Blocks all automated spammers. No templates to mess with.
@@ -207,6 +207,24 @@ You can learn more about vCita at [www.vcita.com](http://www.vcita.com?invite=FS
 If you have any question about the Schedule Meetings feature please contact support@vcita.com
 
 == Changelog ==
+
+= 3.1.8.5 =
+- (18 Jul 2013) - added new settings: "Submit button input attributes" and "Form action attributes". These can be used for Google Analytics tracking code.
+- added captcha font randomization.
+- fixed date does not have to be required.
+- fixed date error message translation.
+
+= 3.1.8.4 =
+- (07 Jul 2013) - Fixed CAPTCHA PHP warning on some servers.
+- Added better date input validation.
+
+= 3.1.8.3 =
+- (26 Jun 2013) - Fixed form Error messages wrapped in required styling + error styling.
+- Fixed allow \n for new line in textarea defaults.
+- Fixed the date field did not retain the value if there is a submit error.
+- Fixed so if redirect seconds are set to 0, use wp_redirect instead of reloading the page with a meta refresh.
+- Some code cleanup.
+
 
 = 3.1.8.2 =
 - (01 Apr 2013) - switched back to PHP sessions because WP Sessions had issues with cache plugins.

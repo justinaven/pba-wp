@@ -12,10 +12,10 @@
 
 
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html lang="en" class="ie6" id="pba"><![endif]--> 
-<!--[if IE 7 ]><html lang="en" class="ie7" id="pba"><![endif]--> 
-<!--[if IE 8 ]><html lang="en" class="ie8" id="pba"><![endif]--> 
-<!--[if IE 9 ]><html lang="en" class="ie9" id="pba"><![endif]--> 
+<!--[if lt IE 7 ]><html lang="en" class="ie6 lte-ie7 lte-ie8" id="pba"><![endif]--> 
+<!--[if IE 7 ]><html lang="en" class="ie7 lte-ie7 lte-ie8" id="pba"><![endif]--> 
+<!--[if IE 8 ]><html lang="en" class="ie8 lte-ie8 lte-ie9" id="pba"><![endif]--> 
+<!--[if IE 9 ]><html lang="en" class="ie9 lte-ie8" id="pba"><![endif]--> 
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" id="pba"><!--<![endif]--> 
 
 <head>

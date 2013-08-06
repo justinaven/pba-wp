@@ -36,7 +36,7 @@ $categories = get_categories( $cat_args );
 
 			<ul class="nav clearfix">
 				<li><a href="/">Home</a></li>
-				<li class="no-link"><a class="sub-nav-head" href="#">Galleries</a>
+				<li class="no-link"><a class="sub-nav-head" href="#">Galleries<span class="expand">&nbsp;</span></a>
 					<ul class="sub-nav">
 						<?php 
 						  	foreach ($pages as $page) {

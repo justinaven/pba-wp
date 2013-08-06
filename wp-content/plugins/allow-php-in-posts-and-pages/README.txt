@@ -4,7 +4,7 @@ Donate link:
 Tags: post, pages, posts, code, php, shortcode, allow, sidebar, variables
 Requires at least: 2.5
 Tested up to: 3.5
-Stable tag: 3.0.3
+Stable tag: 3.0.4
 
 Allow PHP in posts and pages allows you to add php functionality to Wordpress Posts and Pages
 
@@ -155,6 +155,8 @@ as
 = 3.0.3 =
  * Fixed a small issue caused by improper use of wpdb->prepare.
  * Checked for WP 3.5 compatibility
+= 3.0.4 =
+ * Minor bug fix
 
 == Frequently Asked Questions ==
 = What Tags Are Automatically Removed? =

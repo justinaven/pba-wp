@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Allow PHP in Posts and Pages
-version: 3.0.3
+version: 3.0.4
 Plugin URI: http://www.hitreach.co.uk/wordpress-plugins/allow-php-in-posts-and-pages/
 Description: Allow PHP in posts and pages allows you to add php functionality to Wordpress Posts and Pages whilst still retaining HTML tags
 Author: Hit Reach
@@ -30,7 +30,7 @@ if(! class_exists( "allow_php_in_posts" ) ){
 		public $_shared = "";
 		
 		function __construct(){
-			$this->shared = array();
+			$this->_shared = array();
 			add_shortcode( 'php', array( __CLASS__, "shortcode" ) );
 			add_shortcode( 'PHP', array( __CLASS__, "shortcode" ) );
 			add_shortcode( 'allowphp', array( __CLASS__, "shortcode" ) );

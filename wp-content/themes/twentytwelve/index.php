@@ -17,13 +17,13 @@
  include 'header.php';
 	// get_header(); 
 	
-$global_img_ratio = 2/3;
+// $global_img_ratio = 2/3;
 
 $args = array(
 	'posts_per_page'  => 10,
 	'numberposts'     => 10,
 	'offset'          => 0,
-	'category'        => "22,-23",
+	'category'        => "22,-13", // 23 is local & 13 is live exclude client review category
 	'orderby'         => 'post_date',
 	'order'           => 'DESC',
 	// 'include'         => '',
@@ -44,20 +44,22 @@ $posts_array = get_posts( $args );
 
 	<div class="main-outer">
 		<div class="main-inner">
-			<div class="slideshow max-width" data-ratio="<?php echo $global_img_ratio;?>">
-			<?php 
-				$count = 1;
-				foreach( $posts_array as $post ) :	setup_postdata($posted); if ( has_post_thumbnail() ) { 
-					$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-					if($thumb['2']/$thumb['1']>=$global_img_ratio) {$img_class=' height';} else {$img_class=' width';}
-			?>
-				<div class="img-block<?php if($count==1){?> on<?php $count++; } echo $img_class; ?>">
-					<div>
-					<?php echo '<img src="'.$thumb['0'].'" width="'.$thumb['1'].'" height="'.$thumb['2'].'">'; ?>
-					</div>
+			<div class="slideshow">
+				<div class="slideshow-inner">
+					<?php 
+						$count = false;
+						foreach( $posts_array as $post ) :	setup_postdata($posted); if ( has_post_thumbnail() ) { 
+							$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+					?>
+						<div class="img-block<?php if($count==false){?> on<?php $count=true; } ?>">
+							<div class="img-wrap">
+								<div>
+								<?php echo '<img src="'.$thumb['0'].'">'; ?>
+								</div>
+							</div>
+						</div>
+					<?php } endforeach; ?>
 				</div>
-			<?php } endforeach; ?>
-
 			</div>
 		</div>
 	</div>
