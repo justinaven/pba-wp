@@ -34,7 +34,8 @@
 <link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Duru+Sans' rel='stylesheet' type='text/css'>
-
+<link rel="shortcut icon" href="/wp-content/themes/twentytwelve-pba/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/wp-content/themes/twentytwelve-pba/images/favicon.ico" type="image/x-icon">
 <!--[if lte IE 8 ]><script src="/wp-content/themes/twentytwelve-pba/js/respond.js"></script><![endif]--> 
 <script src="/wp-content/themes/twentytwelve-pba/js/script.js"></script>
 
